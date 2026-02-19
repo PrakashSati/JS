@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <div>
+      <h2>This is Dom Heading</h2>
+      <h2>This is Dom Heading</h2>
+      <h2>This is Dom Heading</h2>
+      <h2>This is Dom Heading</h2>
+      <h2>This is Dom Heading</h2>
+    </div>
+    <button id="btn">Change Color></button>
+  </body>
+  <script>
+    let heading = document.getElementsByTagName("h2");
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click", changecolor);
+    // console.log(heading);
+
+    function changecolor() {
+      for (let i = 0; i < heading.length; i++) {
+        if (i % 2 == 0) {
+          heading[i].style.color = "red";
+        } else {
+          heading[i].style.color = "blue";
+        }
+      }
+    }
+  </script>
+</html>

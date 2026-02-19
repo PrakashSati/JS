@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <div id="Container">
+      <h2>Learning Dom</h2>
+    </div>
+
+    <img
+      id="Image"
+      src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSEDaMEoX0Tkzqw74YSBab3HI2czZ14hUpGxq1Wuko5h6hGPVhF"
+      alt=""
+    />
+    <br />
+
+    <button onclick="ChangeText()">Change Text</button><br />
+    <button onclick="ChangeImage()">Change Image</button>
+  </body>
+
+  <script>
+    let container = document.getElementById("Container");
+
+    let image = document.getElementById("Image");
+
+    // console.log(Container);
+    // console.log(Image);
+
+    function ChangeText() {
+      container.innerHTML = "<h2> HIi Pankaj!! </h2>";
+      container.style.color = "red";
+    }
+
+    function ChangeImage() {
+      image.src =
+        "https://img.freepik.com/free-photo/lavender-field-sunset-near-valensole_268835-3910.jpg?semt=ais_user_personalization&w=740&q=80";
+    }
+  </script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container"></div>
+    <button>Click Me</button>
+  </body>
+
+  <script>
+    // creating a object for product details.
+    let obj = {
+      Title: "mobile",
+      Brand: "Samsung",
+      Discription: "16 GB Ram | 256 GB ROM",
+      Img: "https://images.samsung.com/is/image/samsung/assets/in/smartphones/galaxy-a35/buy/ux2-0/720x480-01_Blue.png",
+      Price: 15000,
+    };
+    //  Selecting Div tag using getElementById().
+    let container = document.getElementById("container");
+
+    // crating HTML element using Dom manipulation.
+    let title = document.createElement("p");
+    title.innerHTML = `<h2>Product Title </h2>${obj.Title}`;
+
+    let brand = document.createElement("p");
+    brand.innerHTML = `<h3>Product Brand</h3> ${obj.Brand}`;
+
+    let discription = document.createElement("p");
+    discription.innerHTML = `<b>Product Discription</b> ${obj.Discription}`;
+
+    let img = document.createElement("img");
+    img.src = `${obj.Img}`;
+
+    let price = document.createElement("h3");
+    price.innerHTML = `<h3>Product Price</h3> ${obj.Price}`;
+
+    // container.append(img, title, brand, discription, price);
+
+    // selecting button tag using querySelector() and add event listener and after that append object in div tag.
+    let btn = document.querySelector("button");
+    btn.addEventListener("click", ClickMe);
+    function ClickMe() {
+      container.append(img, title, brand, discription, price);
+    }
+  </script>
+</html>
