@@ -35,6 +35,7 @@ function getData(dataId) {
 // }
 
 // IIFE == It is used for immediately run function without calling it. It is used only one time.
+
 (async function () {
   console.log("Data1....");
   await getData(1);
